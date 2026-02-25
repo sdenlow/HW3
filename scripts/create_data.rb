@@ -48,6 +48,13 @@ historic["occurred_on"] = "2022-04-01"
 historic["place_id"] = charleston.id
 historic.save
 
+historic = Entry.new
+historic["title"] = "Fort Sumter"
+historic["description"] = "learned some history"
+historic["occurred_on"] = "2022-04-02"
+historic["place_id"] = charleston.id
+historic.save
+
 iconic = Entry.new
 iconic["title"] = "Great Wall of China"
 iconic["description"] = "we hiked and hiked and hiked"
@@ -55,9 +62,23 @@ iconic["occurred_on"] = "2022-04-20"
 iconic["place_id"] = beijing.id
 iconic.save
 
+iconic = Entry.new
+iconic["title"] = "Temple of Heaven"
+iconic["description"] = "saw the ancient buildings"
+iconic["occurred_on"] = "2022-04-22"
+iconic["place_id"] = beijing.id
+iconic.save
+
 charm = Entry.new
 charm["title"] = "Van Gogh Museum"
 charm["description"] = "saw some famous paintings"
 charm["occurred_on"] = "2022-04-22"
+charm["place_id"] = amsterdam.id
+charm.save
+
+charm = Entry.new
+charm["title"] = "Barbie: The Dream Experience"
+charm["description"] = "Let's go Barbie"
+charm["occurred_on"] = "2022-05-22"
 charm["place_id"] = amsterdam.id
 charm.save
