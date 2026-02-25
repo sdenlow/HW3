@@ -3,10 +3,7 @@
 <ul>
   <% for place in @places %>
     <li>
-      <%= place["name"] %>
-      <a  href="/places/<%= place["id"] %>">
-        New Place
-        </a>
+      <a href="/places/<%= place["id"] %>"><%= place["name"] %></a>
     </li>
   <% end %>
 </ul>

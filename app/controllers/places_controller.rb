@@ -6,8 +6,10 @@ end
 
   def show
     # find a Places
-    @id = params["id"]
-    @place = Place.find_by({"id" => @id})
+    @place = Place.find_by({"id" => params["id"]})
+    # find all entries for this place
+    @entries = Entry.where({"place_id" => @place["id"]})
+
     # render companies/show view with details about Place
   end
 

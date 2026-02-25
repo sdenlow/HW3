@@ -37,3 +37,4 @@ tacos["title"] = "Ate tacos again"
 tacos["description"] = "Now they were sweet!"
 tacos["occurred_on"] = "2022-01-01"
 tacos["place_id"] = mexico.id
+tacos.save
