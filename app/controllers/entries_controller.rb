@@ -1,37 +1,24 @@
 class EntriesController < ApplicationController
-def index
+  def index
+  end
 
   def show
     @entry = Entry.find_by({"id" => params["id"]})
-    @places = Place.find_by({"id" => @entry["place_id"]})
-    # render places/show view with details about Entry
+    @place = Place.find_by({"id" => @entry["place_id"]})
   end
 
   def new
     @place = Place.find_by({ "id" => params["place_id"] })
-    # render entry/new view with new entry form
   end
 
   def create
-    # start with a new Entry
     @entry = Entry.new
-
-    # assign user-entered form data to Entry's columns
     @entry["title"] = params["title"]
     @entry["description"] = params["description"]
     @entry["occurred_on"] = params["occurred_on"]
-
-    # assign relationship between Entry and Place
     @entry["place_id"] = params["place_id"]
-
-    # save Entry row
     @entry.save
-
-    # redirect user
     redirect_to "/places/#{@entry["place_id"]}"
   end
-
-end
-
 end
 
